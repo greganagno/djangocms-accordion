@@ -7,6 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 
 @python_2_unicode_compatible
 class Accordion(CMSPlugin):
+    title = models.CharField(_('title'), max_length=200, default='')
     custom_classes = models.CharField(_('custom classes'), max_length=200, blank=True)
 
     def __str__(self):
